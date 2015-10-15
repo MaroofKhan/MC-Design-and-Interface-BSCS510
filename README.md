@@ -11,12 +11,13 @@ Control a labyrinth, via servo motors, which, in turn are controlled by an andro
 *	Several plastic components.
 
 ##Theory:
-###*Servo Motor:
+###Servo Motor:
 A servomotor is a rotary actuator or linear actuator that allows for precise control of angular or linear position, velocity and acceleration.[1] It consists of a suitable motor coupled to a sensor for position feedback. It also requires a relatively sophisticated controller, often a dedicated module designed specifically for use with servomotors.
 Servomotors are not a specific class of motor although the term servomotor is often used to refer to a motor suitable for use in a closed-loop control system.
 Servomotors are used in applications such as robotics, CNC machinery or automated manufacturing.
 
 Servo with Arduino UNO, a simple program:
+
 ''''C
 #include <Servo.h>
 
@@ -32,10 +33,11 @@ testServo.write(45);
 }
 ''''
 
-###*HC 05 (Bluetooth Module):
+###HC 05 (Bluetooth Module):
 HC serial Bluetooth products consist of Bluetooth serial interface module and Bluetooth adapter. Bluetooth serial module is used for converting serial port to Bluetooth. These modules have two modes: master and slaver device. The device named after even number is defined to be master or slaver when out of factory and can’t be changed to the other mode.
 	
 HC 05 with Arduino UNO, a simple program:
+
 ''''C
 #define BAUD_RATE 57600
 
