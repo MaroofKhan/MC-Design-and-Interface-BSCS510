@@ -34,13 +34,21 @@ public class Bluetooth extends Activity {
     protected static final int MESSAGE_READ = 1;
     protected static final String HC_05 = "HC05";
 
-    public static final UUID MY_UUID = UUID.fromString(" 00001101-0000-1000-8000-00805F9B34FB");
+    static ConnectedThread connectedThread;
+    static final UUID MY_UUID = UUID.fromString(" 00001101-0000-1000-8000-00805F9B34FB");
 
     static BluetoothAdapter BTAdapter;
     Set<BluetoothDevice> devicesArray;
     BluetoothDevice HC05;
     IntentFilter filter;
     BroadcastReceiver reciever;
+
+    protected void disconnect() {
+        if (connectedThread != null) {
+            connectedThread.cancel();
+            connectedThread = null;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +97,12 @@ public class Bluetooth extends Activity {
                  devicesArray) {
                 if (device.getName().equals(HC_05))
                     HC05 = device;
+            }
 
+            if (HC05 == null) {
+                Toast.makeText(getApplicationContext(), "Couldn't find the Remote Labyrinth.", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "LETS ROLL!", Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -104,7 +117,7 @@ public class Bluetooth extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == RESULT_CANCELED)
-            Toast.makeText(getApplicationContext(), "Blutooth must be enabled to continue.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Bluetooth must be enabled to continue.", Toast.LENGTH_SHORT).show();
     }
 
     private class ConnectThread extends Thread {
