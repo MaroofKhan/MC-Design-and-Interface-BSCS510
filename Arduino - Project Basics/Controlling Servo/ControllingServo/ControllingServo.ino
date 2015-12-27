@@ -15,12 +15,12 @@ void setup() {
 
 void loop() {
   
-  for (int pos = 0; pos <= 180; pos += 1) {
+  for (int pos = 0; pos <= 180; pos += 10) {
     testServo.write(pos);
     delay(15);
   }
   
-  for (int pos = 180; pos >= 0; pos -= 1) {
+  for (int pos = 180; pos >= 0; pos -= 10) {
     testServo.write(pos);
     delay(15);
   }
