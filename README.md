@@ -78,10 +78,10 @@ void loop () {
 ##Logic:
 All the servo are connected to the arduino UNO
 
-*Right servo is connected to pin 9
-*Left servo is connected to pin 6
-*Upper servo is connected to pin 10
-*Lower servo is connected to pin 11
+*	Right servo is connected to pin 9
+*	Left servo is connected to pin 6
+*	Upper servo is connected to pin 10
+*	Lower servo is connected to pin 11
 
 Android phone send a command to the UNO, via HC 05, in the format of L0.5!
 L = Left
