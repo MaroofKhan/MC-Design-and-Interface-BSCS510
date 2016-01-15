@@ -76,19 +76,19 @@ void loop () {
 ````
 
 ##Logic:
-All the servo are connected to the arduino UNO.
-	
-*Right servo is connected to pin 9.
-*Left servo is connected to pin 6.
-*Upper servo is connected to pin 10.
-*Lower servo is connected to pin 11.
+All the servo are connected to the arduino UNO
 
-Android phone send a command to the UNO, via HC 05, in the format of L0.5! 
-L = Left.
-R = Right.
-U = Up.
-D = Down.
-0.5 indicates the movement servo should execute.
+*Right servo is connected to pin 9
+*Left servo is connected to pin 6
+*Upper servo is connected to pin 10
+*Lower servo is connected to pin 11
+
+Android phone send a command to the UNO, via HC 05, in the format of L0.5!
+L = Left
+R = Right
+U = Up
+D = Down
+0.5 indicates the movement servo should execute
 
 The minimum servo angle is 90 degrees, and maximum is 180 degrees, which is mapped onto 0.0 – 5.0.
 
