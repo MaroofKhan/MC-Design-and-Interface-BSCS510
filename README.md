@@ -18,7 +18,7 @@ Servomotors are used in applications such as robotics, CNC machinery or automate
 
 Servo with Arduino UNO, a simple program:
 
-''''C
+''''c
 #include <Servo.h>
 
 Servo testServo;
@@ -38,7 +38,7 @@ HC serial Bluetooth products consist of Bluetooth serial interface module and Bl
 	
 HC 05 with Arduino UNO, a simple program:
 
-''''C
+''''c
 #define BAUD_RATE 57600
 
 String command = "";
