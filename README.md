@@ -25,11 +25,11 @@ Servo testServo;
 int testPin = 9;
 
 void setup() {
-testServo.attach(testPin);
-}	
+	testServo.attach(testPin);
+}
 
 void loop() {  
-testServo.write(45);
+	testServo.write(45);
 }
 ````
 
@@ -43,35 +43,35 @@ HC 05 with Arduino UNO, a simple program:
 
 String command = "";
 void execute (String command) {
-Serial.println(command);
+	Serial.println(command);
 }
 
 void setupBluetoothInput () {
-while (!Serial);
-Serial.begin(BAUD_RATE);
-Serial.println("Let's roll!");
+	while (!Serial);
+	Serial.begin(BAUD_RATE);
+	Serial.println("Let's roll!");
 }
 
 void getBluetoothInput () {
-while (Serial.available() == 0);
-char input;
-while (Serial.available() > 0) {
-input = ((byte)Serial.read());
-if (input == '!') {
-execute(command);
-command = "";
-break;
-}
-else command += input;
-}
+	while (Serial.available() == 0);
+	char input;
+	while (Serial.available() > 0) {
+		input = ((byte)Serial.read());
+		if (input == '!') {
+			execute(command);
+			command = "";
+			break;
+		}
+		else command += input;
+	}
 }
 
 void setup () {
-setupBluetoothInput();
+	setupBluetoothInput();
 }
 
 void loop () {
-getBluetoothInput();
+	getBluetoothInput();
 }
 ````
 
