@@ -18,7 +18,7 @@ Servomotors are used in applications such as robotics, CNC machinery or automate
 
 Servo with Arduino UNO, a simple program:
 
-''''c
+````c
 #include <Servo.h>
 
 Servo testServo;
@@ -31,14 +31,14 @@ testServo.attach(testPin);
 void loop() {  
 testServo.write(45);
 }
-''''
+````
 
 ###HC 05 (Bluetooth Module):
 HC serial Bluetooth products consist of Bluetooth serial interface module and Bluetooth adapter. Bluetooth serial module is used for converting serial port to Bluetooth. These modules have two modes: master and slaver device. The device named after even number is defined to be master or slaver when out of factory and can’t be changed to the other mode.
 	
 HC 05 with Arduino UNO, a simple program:
 
-''''c
+````c
 #define BAUD_RATE 57600
 
 String command = "";
@@ -73,7 +73,7 @@ setupBluetoothInput();
 void loop () {
 getBluetoothInput();
 }
-''''
+````
 
 ##Logic:
 All the servo are connected to the arduino UNO.
