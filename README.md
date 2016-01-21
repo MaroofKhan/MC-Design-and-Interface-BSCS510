@@ -83,13 +83,13 @@ All the servo are connected to the arduino UNO
 *	Upper servo is connected to pin 10
 *	Lower servo is connected to pin 11
 
-Android phone send a command to the UNO, via HC 05, in the format of L0.5!
-L = Left
-R = Right
-U = Up
-D = Down
-0.5 indicates the movement servo should execute
+Android phone send a command to the UNO, via HC 05, in the format of L0.5!<br />
 
+*	L = Left
+*	R = Right
+*	U = Up
+*	D = Down
+
+0.5 indicates the movement servo should execute.
 The minimum servo angle is 90 degrees, and maximum is 180 degrees, which is mapped onto 0.0 – 5.0.
-
 With the android phones movement, it send commands to arduino UNO via HC 05, which rotates the servo motors.
