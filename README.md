@@ -1,4 +1,5 @@
 #Remote Labyrinth
+Final project for course# BSCS510, Department of Computer Science, University of Karachi.
 
 ##Objective:
 Control a labyrinth, via servo motors, which, in turn are controlled by an android device, via Bluetooth.
